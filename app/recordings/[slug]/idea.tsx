@@ -29,12 +29,6 @@ export default function Idea({data}:any) {
      <React.Fragment>
         <div ref={ref} className="w-[100vw] min-h-[100svh]  bg-[--purple] text-[--black] mt-[40px] relative grid grid-cols-12 pb-[200px]">
      
-            {data.cover?(
-              data.cover.image?(
-               <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={data.cover.image} time={7}/></div>
-              ):('')
-            ):('')}
-            <div className="col-span-4 uppercase px-[--sm] "><p className="footnote">{getDateLong(data._createdAt)}</p></div>
             {data.content.map((item:any,i:number)=>{
                 return(
                 <React.Fragment key={`${i}-text`}>

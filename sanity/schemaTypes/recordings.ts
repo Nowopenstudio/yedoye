@@ -61,38 +61,35 @@ export default {
             ]
         },
 
-        {   name:'content',
-            type:'array',
-            title:'Content',
-            options:{sortable:true,layout:"list"},
-            of:[{
-                name:"section",
-                type: "object",
-                title:'Content',
-                fields:[
-                    {
-                        name:"image",
-                        type:'image',
-                        title:"file"
-                    },
-                    {
-                        name:"video",
-                        type:'mux.video',
-                        title:"Video"
-                    },
-                    {
-                        name:"desc",
+         {
                         type:'array',
-                        title:"Content",
-                        of:[{type:"block"}]
-                    }
-                ]
-            }]
-    
-         },
+                        name:'content',
+                        title:'Content',
+                        of:[
+                                {name:'single', title:"Single", type:"object",fields:[
+                                {name:'content',title:'Type', type:'string',initialValue:'text',options: {
+                                    list: [
+                                    {title: 'Text', value: 'text'},
+                                    {title: 'Image', value: 'image'},
+                                    {title:'Image Gallery', value:"gallery"},
+                                     {title: 'Video', value: 'video'}
+                                    ],
+
+                                    
+                                }},
+                                {name:'text',title:'Text',type:'array',of:[{type:'block'}], hidden: ({ parent }:any) => parent?.content !== "text"},
+                                {name:'image',title:'Image',type:'image', hidden: ({ parent }:any) => parent?.content !== "image"},
+                                {name:'gallery',title:'Image Gallery',type:'array', hidden: ({ parent }:any) => parent?.content !== "gallery",of:[{type:'image', name:'image',title:'Image'}]},
+                                {name:'vid',title:'Video',type:'mux.video', hidden: ({ parent }:any) => parent?.content !== "video"},
+                            ]}
+                        ]
+                    },
          {name:'credits',type:'array', title:'Credits',of:[
-            {name:'title', type:"string", title:'Title'},
+           {name:'single',title:'person',type:'object',fields:[
+             {name:'title', type:"string", title:'Title'},
             {name:'name', type:'string', title:"Name"},
+           ]}
+           
         
         ]},
         {

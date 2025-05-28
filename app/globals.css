@@ -39,6 +39,8 @@ html.lenis, html.lenis body {
 	--controls: none;
   }
 
+
+
   
 .bgMux mux-player{
   --controls: none;
@@ -98,17 +100,24 @@ h3{
   line-height: 130%;
 }
 
+.titleText{
+    text-box-trim: both;
+  text-box-edge: cap;
+}
+
 .infoLogo{
   margin-left: -38px;
 }
 
 .richText p, p{
   font-size:1.5rem;
-  margin-bottom:var(--xs);
   font-weight:700;
   line-height: 120%;
 }
 
+.richText p{
+    margin-bottom:var(--xs);
+}
 .richText strong{
     font-family: "sans", Arial, Helvetica, sans-serif;
     font-size:1.35rem;

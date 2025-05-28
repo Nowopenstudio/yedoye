@@ -12,7 +12,7 @@ export default async function Home() {
 
     }`)
  const {data} = query.data  
- console.log(data)
+ console.log(data.cover.ratio)
   return (
 
   
