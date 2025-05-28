@@ -1,26 +1,155 @@
-@import "tailwindcss";
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --purple:#3315D1;
+  --black:#0B0A0A;
+  --white: #ffffff;
+  --2xs:8px;
+  --xs: 15px;
+  --sm: 30px;
+  --med: 60px;
+  --lrg: 90px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Lenis */
+html.lenis, html.lenis body {
+  height: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.noControl mux-player {
+	/* Hide all controls at once */
+	--controls: none;
   }
+
+  
+.bgMux mux-player{
+  --controls: none;
+  --media-object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 0);
 }
+
+/* font embeds */
+@font-face {
+	font-family: 'sans';
+	src: url('/fonts/san-med.woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Courier New', Courier, monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, .navBut{
+    font-family: "sans", Arial, Helvetica, sans-serif;
+
+  font-size:3.375rem;
+}
+
+h2{
+    font-family: "sans", Arial, Helvetica, sans-serif;
+
+  font-size:2.625rem;
+}
+
+h2{
+    font-family: "sans", Arial, Helvetica, sans-serif;
+
+  font-size:2.625rem;
+}
+
+h3{
+    font-family: "sans", Arial, Helvetica, sans-serif;
+
+  font-size:2rem;
+}
+
+.footnote{
+  font-size:1rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.infoLogo{
+  margin-left: -38px;
+}
+
+.richText p, p{
+  font-size:1.5rem;
+  margin-bottom:var(--xs);
+  font-weight:700;
+  line-height: 120%;
+}
+
+.richText strong{
+    font-family: "sans", Arial, Helvetica, sans-serif;
+    font-size:1.35rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+  }
+
+  .singleShow:nth-child(odd) .date,   .singleShow:nth-child(odd) .cta, .singleShow:nth-child(even) .title{
+    background-color: var(--white);
+    color:var(--purple);
+  }
+
+    .singleShow:nth-child(even) .date, .singleShow:nth-child(even) .cta, .singleShow:nth-child(odd) .title{
+    background-color: var(--purple);
+    color:var(--white)
+  }
+
+   .singleShow:nth-child(odd) svg{
+    fill:var(--purple)
+   }
+     .singleShow:nth-child(even) svg{
+    fill:var(--white)
+   }
+
+   .bgActive{
+    background-color: var(--purple);
+    color: var(--black)
+   }
+
+   .bgActive.invertBG{
+      background-color: var(--black);
+    color: var(--purple)
+   }
+
+   .singleIdea:hover{
+    background-color: var(--purple);
+    color:var(--black);
+   }
+
+   .singleIdea h1{
+    line-height: 1.3em;
+   }
+  
