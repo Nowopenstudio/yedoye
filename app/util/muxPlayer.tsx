@@ -10,6 +10,7 @@ export function MuxVideoBG({playbackId, title, ratio}: any) {
 
 export function MuxVideo({playbackId, title, poster, ratio,play}:any) {
   if (!playbackId) return null
+
   
   return <MuxPlayer poster={poster?poster:`https://image.mux.com/${playbackId}/thumbnail.webp?time=0`} playbackId={playbackId} playsInline autoPlay={play} metadata={title ? {video_title: title} : undefined}  style={{ aspectRatio:`${ratio.split(':')[0]}/${ratio.split(':')[1]}`}} />
 }

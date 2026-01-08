@@ -25,7 +25,7 @@ export default function Single({data,count}:any) {
   return (
    
     
-     <Link href={`/ideas/${data.slug}`} onMouseOver={()=>over()} onMouseOut={()=>out()}className={`singleIdea col-span-1 h-[33vw] border border-[--purple] p-[--sm] uppercase relative`}>
+     <Link href={`/ideas/${data.slug}`} onMouseOver={()=>over()} onMouseOut={()=>out()}className={`singleIdea col-span-1 aspect-video 2xl:aspect-square border border-[--purple] p-[--sm] uppercase relative`}>
                        <h1 className="mb-[--sm]">{data.title}</h1>
                        <p className="footnote">{getDateLong(data._createdAt)}</p>
                        {active?(

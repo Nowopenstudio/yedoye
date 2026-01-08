@@ -11,7 +11,7 @@ import Idea from "./idea";
 export default async function Home({params}:any) {
    const {slug} = await params
   const query = await getData(`{
-    'data':*[_type=='recordings' && slug.current=="${slug}"][0]{cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},title, "slug":slug.current,content[]{content,text,"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}}
+    'data':*[_type=='recordings' && slug.current=="${slug}"][0]{title, "slug":slug.current,content[]{content,text,"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}}
  }`)
 
  const {data} = query.data  

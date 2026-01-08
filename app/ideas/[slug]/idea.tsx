@@ -34,12 +34,12 @@ export default function Idea({data}:any) {
                <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={data.cover.image} time={7}/></div>
               ):('')
             ):('')}
-            <div className="col-span-4 uppercase px-[--sm] "><p className="footnote">{getDateLong(data._createdAt)}</p></div>
+            <div className="md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4 uppercase mb-[--med] 2xl:mb-0 2xl:px-[--sm] "><p className="footnote">{getDateLong(data._createdAt)}</p></div>
             {data.content.map((item:any,i:number)=>{
                 return(
                 <React.Fragment key={`${i}-text`}>
                    {item.content=="text"?(
-                    <div className="col-span-6 col-start-5 richText">
+                    <div className="col-span-6 xl:col-start-4 2xl:col-start-5 richText">
                       <PortableText value={item.text}/>
                     </div>
                    ):('')}

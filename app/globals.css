@@ -5,7 +5,7 @@
   --black:#0B0A0A;
   --white: #ffffff;
   --2xs:8px;
-  --xs: 15px;
+  --xs: 14px;
   --sm: 30px;
   --med: 60px;
   --lrg: 90px;
@@ -159,6 +159,47 @@ h3{
    }
 
    .singleIdea h1{
-    line-height: 1.3em;
+    line-height: 1.2em;
+   }
+
+   .navBut.active{
+    color:transparent;
+    -webkit-text-stroke-color: var(--black);
+    -webkit-text-stroke-width: 2px ;
+
+   }
+
+   .bgActive.invertBG .navBut.active{
+    -webkit-text-stroke-color: var(--purple);
    }
   
+
+
+   @media (max-width:1200px){
+    .navBut{
+      font-size:2rem;
+    }
+
+
+    .navBut.active{
+      -webkit-text-stroke-width: 1px ;
+  
+     }
+    }
+  
+
+    @media (max-width:800px){
+      .navBut{
+        font-size:1.25rem;
+      }
+
+      .navBut.active{
+        -webkit-text-stroke-width: .5px ;
+    
+       }
+       h1{
+        font-size:2rem
+      }
+  
+      }
+    
