@@ -14,10 +14,10 @@ export default function LinkScroll({data,time}:any) {
   const [ref, {width}] = useMeasure();
   const xTranslation = useMotionValue(0)
   useEffect(()=>{
-      const finalPos = -width / 2  ;
+      const finalPos = -width / 3  ;
     
     
-      const controls = animate(xTranslation, [finalPos, 0],{
+      const controls = animate(xTranslation, [-width+(width/3), finalPos],{
         ease:'linear', duration:time, repeat:Infinity, repeatType:'loop', repeatDelay:0
       })
     
@@ -34,7 +34,8 @@ export default function LinkScroll({data,time}:any) {
               <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
               <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
                 <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
-             
+                <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
+                
    
            
          

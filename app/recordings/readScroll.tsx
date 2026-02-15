@@ -14,13 +14,14 @@ export default function ReadScroll({data,time}:any) {
   const [ref, {width}] = useMeasure();
   const xTranslation = useMotionValue(0)
   useEffect(()=>{
-      const finalPos = -width / 2  ;
+    const finalPos = -width / 3  ;
     
     
-      const controls = animate(xTranslation, [finalPos, 0],{
-        ease:'linear', duration:time, repeat:Infinity, repeatType:'loop', repeatDelay:0
-      })
-    
+    const controls = animate(xTranslation, [-width+(width/3), finalPos],{
+      ease:'linear', duration:time, repeat:Infinity, repeatType:'loop', repeatDelay:0
+    })
+
+
       return controls.stop;
     }, [xTranslation, width])
   
@@ -34,7 +35,8 @@ export default function ReadScroll({data,time}:any) {
               <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h2 className="flex-shrink-0">{data.cta}</h2><Arrow fill={`var(--purple)`} className="flex-shrink-0 w-[120px] h-auto" /></div>
               <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h2 className="flex-shrink-0">{data.cta}</h2><Arrow fill={`var(--purple)`} className="flex-shrink-0 w-[120px] h-auto" /></div>
                 <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h2 className="flex-shrink-0">{data.cta}</h2><Arrow fill={`var(--purple)`} className="flex-shrink-0 w-[120px] h-auto" /></div>
-             
+                <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h2 className="flex-shrink-0">{data.cta}</h2><Arrow fill={`var(--purple)`} className="flex-shrink-0 w-[120px] h-auto" /></div>
+
    
            
          

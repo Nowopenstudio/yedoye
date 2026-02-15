@@ -18,10 +18,10 @@ export default async function Home() {
   <React.Fragment>
     
          <div className="w-[100vw] grid grid-cols-12 text-[--black] bg-purple pt-[--start] items-start  flex-end mt-[40px]">
-              <a href={`mailto:${data.links[0].link}`}><div className="relative bg-[--black] w-[100vw] overflow-hidden h-[80px]"><CTAScroll  color={'purple'} time={5} cta={['Book Yedoye', 'contact Yedoye']}/></div></a>
+              <a href={`mailto:${data.links[0].link}`}><div className="relative bg-[--black] w-[100vw] overflow-hidden h-[80px]"><CTAScroll  color={'purple'} time={10} cta={['Book Yedoye', 'contact Yedoye']}/></div></a>
           </div>
           <div className="fixed bottom-[80px] z-[100] w-[100vw] overflow-hidden h-[80px] left-0 bg-black">
-            <LinkScroll  color={'purple'} time={10} data={data.links}/>
+            <LinkScroll  color={'purple'} time={5} data={data.links}/>
           </div>
           <div className="scrollImages bg-[--black] w-[100vw] overflow-hidden">
               <GalleryScroll data={data.media} time={7}/>
