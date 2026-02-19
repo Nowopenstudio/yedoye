@@ -18,14 +18,14 @@ export default async function Home() {
 
   
   <React.Fragment>
-    <div className="min-h-[100svh] w-[100vw] relative">
-       <div className="w-[100vw] bottom-[80px] absolute showHold">
+    <div className="min-h-[100svh] w-[100vw] relative flex-col-reverse flex  pb-[58px] md:pb-[88px] lg:pb-[48px] xl:pb-[80px]">
+       <div className="w-[100vw]  showHold">
           {data.map((item:any,i:number)=>{
             return(
-              <div key={`show-${i}`} className="singleShow w-full grid grid-cols-12 uppercase items-center">
-                <Link href={`/shows/${item.slug}`} className="date col-span-3 py-[--xs] px-[--sm] text-center"><h3>{`${getDate(item.info.date)} @ ${item.info.timeStart}`}</h3></Link>
-                <Link href={`/shows/${item.slug}`} className="title col-span-6 py-[--xs] px-[--sm] text-center"><h3>{item.title}</h3></Link>
-                <div className="cta col-span-3 py-[--xs] overflow-hidden"><LinkScroll data={item.info} time={Math.floor(Math.random() * 6)+3}/></div>
+              <div key={`show-${i}`} className="singleShow w-full grid grid-cols-12 uppercase ">
+                <Link href={`/shows/${item.slug}`} className="date col-span-full md:col-span-3 pt-[--xs] pb-0 md:pt-[--sm] md:pb-[--sm] text-center flex items-center justify-center "><h3>{`${getDate(item.info.date)} @ ${item.info.timeStart}`}</h3></Link>
+                <Link href={`/shows/${item.slug}`} className="title col-span-full md:col-span-6 pt-0 pb-[--xs] md:pt-[--sm] md:pb-[--sm] text-center flex items-center "><h3 className="w-full">{item.title}</h3></Link>
+                <div className="cta col-span-full md:col-span-3 py-[--xs] overflow-hidden flex items-center "><LinkScroll data={item.info} time={Math.floor(Math.random() * 6)+3}/></div>
   
               </div>
             )

@@ -28,7 +28,7 @@ export default function Single({data,count}:any) {
   return (
    
     
-     <Link href={`/recordings/${data.slug}`} onMouseOver={()=>over()} onMouseOut={()=>out()} className={`w-1/3 pr-[--sm] flex-shrink-0 h-full overflow-hidden relative`}>
+     <Link href={`/recordings/${data.slug}`} onMouseOver={()=>over()} onMouseOut={()=>out()} className={`w-[100vw] md:w-[50vw] lg:w-[33.33333333333333vw] pr-[--sm] flex-shrink-0 h-full overflow-hidden relative recordingSingle`}>
                           {data.cover.image?(
                             <div className="absolute top-0 left-0 w-full h-full z-[0]">
                               <Image alt="image" height={0}  width={0} sizes="100vw" src={data.cover.image}  className={`fadeOn w-full h-full object-cover`}/>
@@ -41,14 +41,15 @@ export default function Single({data,count}:any) {
                              <div className="h-full w-full bgMux noControl z-0"> <MuxVideo playbackId={data.cover.vid} title={`Home Video`} ratio={data.cover.ratio} play={true}/></div>
                             </div>
                           ):('')}
-                          <div className="bg-[--black] text-[--purple] w-full bottom-0 left-0 absolute z-10 overflow-hidden">
+                          
+                       </React.Fragment>
+                       ):('')}
+                       <div className="bg-[--black] text-[--purple] w-full bottom-0 left-0 absolute z-10 overflow-hidden cta ">
                             <div className="bg-[--purple] w-full py-[--xs] text-[--black] text-center"><p className="titleText">
                               <ReadScroll data={{'cta':`${data.info.date?`${data.info.date}  - `:''}${data.info.location?`${data.info.location} - `:''}${data.title}`,"url":`/recording/${data.slug}`}} time={14}/></p></div>
                             <ReadScroll data={{"cta":"View","url":`/recording/${data.slug}`}} time={4}/>
                             
                           </div>
-                       </React.Fragment>
-                       ):('')}
       
      </Link>
   

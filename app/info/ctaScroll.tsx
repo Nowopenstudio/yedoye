@@ -14,7 +14,7 @@ export default function CTAScroll({data,cta,bg,color,time}:any) {
   const [ref, {width}] = useMeasure();
   const xTranslation = useMotionValue(0)
   useEffect(()=>{
-    const finalPos = -width+(width/3*2)  ;
+    const finalPos = -width/3  ;
     
     
     const controls = animate(xTranslation, [-width+(width/3), finalPos],{
@@ -28,36 +28,36 @@ export default function CTAScroll({data,cta,bg,color,time}:any) {
   return (
    
     
-      <motion.div  className="absolute flex left-0 items-center top-[0] z-[1 gap-[--sm]" ref={ref} style={{x:xTranslation,color:`var(--${color})`}}>
+      <motion.div  className=" flex left-0 items-center top-[0] z-[1 gap-[--sm] w-max" ref={ref} style={{x:xTranslation,color:`var(--${color})`}}>
           
         {cta.map((item:any,i:number)=>{
             return(
-              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
+              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
             )
         })}
             {cta.map((item:any,i:number)=>{
             return(
-              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
+              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
             )
         })}
                {cta.map((item:any,i:number)=>{
             return(
-              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
+              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
             )
         })}
         {cta.map((item:any,i:number)=>{
             return(
-              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
+              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
             )
         })}
             {cta.map((item:any,i:number)=>{
             return(
-              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
+              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
             )
         })}
                {cta.map((item:any,i:number)=>{
             return(
-              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
+              <div key={`${cta[0]}-${i}`} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item}</h1><Arrow fill={`var(--${color})`}/></div>
             )
         })}
 

@@ -33,13 +33,13 @@ export default function Idea({data}:any) {
                 return(
                 <React.Fragment key={`${i}-text`}>
                    {item.content=="text"?(
-                    <div className="col-span-6 col-start-5 richText">
+                    <div className="col-span-full px-[--sm] xl:px-0 md:col-span-10 xl:col-span-6 xl:col-start-4  richText">
                       <PortableText value={item.text}/>
                     </div>
                    ):('')}
                 {item.content=="image"?(
                     <div key={`${i}-image`} className="col-span-12 overflow-hidden">
-                      <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={item.image} time={7}/></div>
+                      <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={item.image} time={12}/></div>
   
                     </div>
                    ):('')}

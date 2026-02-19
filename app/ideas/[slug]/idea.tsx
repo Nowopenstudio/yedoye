@@ -31,21 +31,25 @@ export default function Idea({data}:any) {
      
             {data.cover?(
               data.cover.image?(
-               <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={data.cover.image} time={7}/></div>
+               <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={data.cover.image} time={12}/></div>
               ):('')
             ):('')}
-            <div className="md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4 uppercase mb-[--med] 2xl:mb-0 2xl:px-[--sm] "><p className="footnote">{getDateLong(data._createdAt)}</p></div>
+            <div className="col-span-full px-[--sm] xl:px-0 md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4 uppercase mb-[--sm] 2xl:mb-0 2xl:px-[--sm] ">
+            <p className="mb-[--xs] md:w-2/3" ><strong>{data.title}</strong></p>
+              <p className="footnote">{getDateLong(data._createdAt)}</p>
+              
+              </div>
             {data.content.map((item:any,i:number)=>{
                 return(
                 <React.Fragment key={`${i}-text`}>
                    {item.content=="text"?(
-                    <div className="col-span-6 xl:col-start-4 2xl:col-start-5 richText">
+                    <div className="col-span-full px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 richText">
                       <PortableText value={item.text}/>
                     </div>
                    ):('')}
                 {item.content=="image"?(
                     <div key={`${i}-image`} className="col-span-12 overflow-hidden">
-                      <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={item.image} time={7}/></div>
+                      <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <GalleryScroll data={item.image} time={12}/></div>
   
                     </div>
                    ):('')}
@@ -54,8 +58,8 @@ export default function Idea({data}:any) {
             })}
           </div>
   
-          <div className="fixed z-[100] w-[100vw] bg-[--black] bottom-[80px] left-0">
-            <div className="w-full px-[--sm] text-[--purple] uppercase"><h1>{data.title}</h1></div>
+          <div className="fixed z-[100] w-[100vw] bg-[--black]  bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] left-0">
+            <div className="w-full px-[--sm] text-[--purple] uppercase"><h1 className='w-full truncate'>{data.title}</h1></div>
             <motion.div className="absolute h-full top-0 left-0 z-10 bg-[--white] pl-[--sm] overflow-hidden uppercase text-[--purple]" style={{width}}><h1 className="w-[100vw]">{data.title}</h1></motion.div>
           </div>
   

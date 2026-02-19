@@ -14,10 +14,10 @@ export default function ShowScroll({data,time}:any) {
   const [ref, {width}] = useMeasure();
   const xTranslation = useMotionValue(0)
   useEffect(()=>{
-      const finalPos = -width / 2 ;
+      const finalPos = -width / 3 ;
     
     
-      const controls = animate(xTranslation, [finalPos, 0],{
+      const controls = animate(xTranslation, [-width+(width/3), finalPos],{
         ease:'linear', duration:time, repeat:Infinity, repeatType:'loop', repeatDelay:0
       })
     
@@ -27,16 +27,20 @@ export default function ShowScroll({data,time}:any) {
   return (
    
     
-      <motion.div  className="flex left-0 items-center z-[100]" ref={ref} style={{x:xTranslation}}>
+      <motion.div  className="flex left-0 items-center z-[100] w-max" ref={ref} style={{x:xTranslation}}>
              <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
               <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
                <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
                 <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
                  <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
                   <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
-                   <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
-                    <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
-                     <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+                  <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+                 <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+                  <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+                  <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+                 <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+                  <div   className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h1 className="flex-shrink-0 text-[--purple]">{data.cta}</h1><Arrow className="flex-shrink-0 w-[120px] h-auto" fill={`var(--purple)`}/></div>
+
       
            
                             

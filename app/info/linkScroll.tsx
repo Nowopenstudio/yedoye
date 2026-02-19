@@ -15,10 +15,10 @@ export default function LinkScroll({data,color,time}:any) {
  const {winX} = useResize();
   const xTranslation = useMotionValue(0)
   useEffect(()=>{
-    const finalPos = 0 ;
+    const finalPos = -width/3 ;
     
     
-    const controls = animate(xTranslation, [-winX+(width/2), finalPos],{
+    const controls = animate(xTranslation, [-width+(width/3), finalPos],{
       ease:'linear', duration:time, repeat:Infinity, repeatType:'loop', repeatDelay:0
     })
     
@@ -28,28 +28,42 @@ export default function LinkScroll({data,color,time}:any) {
   return (
    
     
-      <motion.div  className="flex left-0 items-center top-[0] z-[1] gap-[--sm]" ref={ref} style={{x:xTranslation,color:`var(--${color})`}}>
+      <motion.div  className="flex left-0 items-center top-[0] z-[1] gap-[--sm] w-max" ref={ref} style={{x:xTranslation,color:`var(--${color})`}}>
           
         {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
             )
         })}
           {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
             )
         })}
        {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
             )
         })}
-          {data.map((item:any,i:number)=>{
+         {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm]"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
             )
         })}
+         {data.map((item:any,i:number)=>{
+            return(
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+            )
+        })}
+         
+         {data.map((item:any,i:number)=>{
+            return(
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+            )
+        })}
+         
+         
+         
         
         
     

@@ -76,17 +76,19 @@ h1, .navBut{
   font-size:3.375rem;
 }
 
+.richText h1{
+ line-height: 1.1em;
+}
+
+
+
 h2{
     font-family: "sans", Arial, Helvetica, sans-serif;
 
   font-size:2.625rem;
+  line-height: 1em;
 }
 
-h2{
-    font-family: "sans", Arial, Helvetica, sans-serif;
-
-  font-size:2.625rem;
-}
 
 h3{
     font-family: "sans", Arial, Helvetica, sans-serif;
@@ -118,7 +120,7 @@ h3{
 .richText p{
     margin-bottom:var(--xs);
 }
-.richText strong{
+.richText strong, strong{
     font-family: "sans", Arial, Helvetica, sans-serif;
     font-size:1.35rem;
     font-weight: 900;
@@ -172,12 +174,23 @@ h3{
    .bgActive.invertBG .navBut.active{
     -webkit-text-stroke-color: var(--purple);
    }
+
+   .recordingSingle .cta{
+    display:none;
+   }
+
+   .recordingSingle:hover .cta{
+    display:block;
+   }
   
 
 
    @media (max-width:1200px){
+    h1{
+      font-size: 2.5rem;
+    }
     .navBut{
-      font-size:2rem;
+      font-size:2.5rem;
     }
 
 
@@ -188,10 +201,12 @@ h3{
     }
   
 
-    @media (max-width:800px){
+    @media (max-width:850px){
       .navBut{
         font-size:1.25rem;
       }
+
+   
 
       .navBut.active{
         -webkit-text-stroke-width: .5px ;
@@ -200,6 +215,56 @@ h3{
        h1{
         font-size:2rem
       }
-  
+
+      h1.date{
+        font-size:1.5rem;
       }
+
+      h3{
+        font-size:1.125rem;
+        line-height: 1.1em;
+      }
+
+      .title h3, .cta h3{
+        font-size:2.25rem;
+      }
+
+      .singleShow:nth-child(odd) svg,.singleShow:nth-child(even) svg{
+      fill:#ffffff;
+      }
+
+      .singleShow:nth-child(odd) .date, .singleShow:nth-child(odd) .title,.singleShow:nth-child(even) .date, .singleShow:nth-child(even) .title{
+        background-color: var(--white);
+        color:var(--purple);
+      }
+
+      
+      .singleShow:nth-child(odd) .cta,.singleShow:nth-child(even) .cta{
+        background-color: var(--purple);
+        color:var(--white);
+      }
+    
+  
+    
+    }
+
+
+      @media (max-width:600px){
+       .richText p{
+        font-size:1.25rem;
+       }
+
+       .recordingSingle .cta{
+        display:block;
+       }
+
+       .richText strong{
+        font-family: "sans", Arial, Helvetica, sans-serif;
+        font-size:1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    
+      }
+    
+        }
     
