@@ -36,10 +36,13 @@ console.log(page)
           </div>
 
           <div className="homeCover w-[100vw] h-[100dvh] fixed z-[0] top-0 left-0 pointer-events-none ">
-              {data.cover.vid && (page =="/" || page == "/shows") ?(
-               <div className="h-full w-full bgMux noControl z-0"> <MuxVideoBG playbackId={data.cover.vid} title={`Home Video`} ratio={data.cover.ratio}/></div>
-                ):(                    <Image alt="image" height={0}  width={0} sizes="100vw" src={data.cover.image} className={`z-[0] fadeOn w-full h-full object-cover `}/>
-                )}
+             {(page =="/" || page == "/shows")?(
+              data.cover.vid?(
+                <div className="h-full w-full bgMux noControl z-0"> <MuxVideoBG playbackId={data.cover.vid} title={`Home Video`} ratio={data.cover.ratio}/></div>
+                 ):(                    <Image alt="image" height={0}  width={0} sizes="100vw" src={data.cover.image} className={`z-[0] fadeOn w-full h-full object-cover `}/>
+                 )
+             ):('')}
+             
               </div>
       </ReactLenis>
         
