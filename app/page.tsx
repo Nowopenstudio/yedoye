@@ -18,12 +18,12 @@ export default async function Home() {
   
   <React.Fragment>
     
-          <div className="homeCover w-[100vw] h-[100dvh] relative z-[0]">
+          {/* <div className="homeCover w-[100vw] h-[100dvh] relative z-[0]">
               {data.cover.vid?(
                <div className="h-full w-full bgMux noControl z-0"> <MuxVideoBG playbackId={data.cover.vid} title={`Home Video`} ratio={data.cover.ratio}/></div>
                 ):(                    <Image alt="image" height={0}  width={0} sizes="100vw" src={data.cover.image} className={`z-[0] fadeOn w-full h-full object-cover `}/>
                 )}
-              </div>
+              </div> */}
 
   </React.Fragment>
 

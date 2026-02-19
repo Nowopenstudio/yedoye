@@ -33,13 +33,13 @@ export default async function Home() {
        </div>
 
     </div>
-     <div className="homeCover w-[100vw] h-[100dvh] absolute z-[-1] top-0 left-0">
+     {/* <div className="homeCover w-[100vw] h-[100dvh] absolute z-[-1] top-0 left-0">
                   {home.cover.vid?(
                    <div className="h-full w-full bgMux noControl z-0"> <MuxVideoBG playbackId={home.cover.vid} title={`Home Video`} ratio={home.cover.ratio}/></div>
                     ):(                    <Image alt="image" height={0}  width={0} sizes="100vw" src={home.cover.image} className={`z-[0] fadeOn w-full h-full object-cover `}/>
                     )}
     </div>
-         
+          */}
 
 
 

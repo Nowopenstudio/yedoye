@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import useResize from '../util/useResize';
 import Image from 'next/image';
 import LogoScroll from './logoScroll';
+import { MuxVideoBG } from '../util/muxPlayer';
 
 
 export default function Navbar({data}:any){
@@ -23,7 +24,7 @@ console.log(page)
      <ReactLenis root>
      
 
-      <div className={`pointer-events-none w-[100vw] h-[100dvh] flex justify-between fixed top-0  px-[--xs] lg:px-[--sm] uppercase text-[--purple]  overflow-hidden`} style={{zIndex: `${(page =="/" || page == "/shows")?"100":"10"}`}}>
+      <div className={`pointer-events-none w-[100vw] h-[100dvh] flex justify-between fixed top-0  px-[--xs] lg:px-[--sm] uppercase text-[--purple]  overflow-hidden z-[10]`}>
           <LogoScroll />
           </div>
         
@@ -33,6 +34,13 @@ console.log(page)
             <Link href={`/recordings`}><div className={`navBut py-[--xs] lg:py-0 ${page.includes('recordings')?"active":""}`}>recordings</div></Link>
             <Link href={`/info`}><div className={`navBut py-[--xs] lg:py-0 ${page.includes('info')?"active":""}`}>info</div></Link>
           </div>
+
+          <div className="homeCover w-[100vw] h-[100dvh] fixed z-[0] top-0 left-0 pointer-events-none ">
+              {data.cover.vid && (page =="/" || page == "/shows") ?(
+               <div className="h-full w-full bgMux noControl z-0"> <MuxVideoBG playbackId={data.cover.vid} title={`Home Video`} ratio={data.cover.ratio}/></div>
+                ):(                    <Image alt="image" height={0}  width={0} sizes="100vw" src={data.cover.image} className={`z-[0] fadeOn w-full h-full object-cover `}/>
+                )}
+              </div>
       </ReactLenis>
         
     

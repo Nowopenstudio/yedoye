@@ -17,16 +17,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-//   const query = await getData(`{
-//     'data':*[_type=='settings'][0]{links,"topLeft":topLeft.asset->url,"topRight":topRight.asset->url,"bot":bottom.asset->url}
-//  }`)
-//  const {data} = query.data
+  const query = await getData(`{
+    'data':*[_type=='home'][0]{cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}},
+
+    }`)
+ const {data} = query.data  
 
   return (
     <html lang="en">
   
         <body className="bg-[--black]">
-        <Navbar/>
+        <Navbar data={data}/>
           {children}
           </body>
     
