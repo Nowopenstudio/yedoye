@@ -175,11 +175,11 @@ h3{
     -webkit-text-stroke-color: var(--purple);
    }
 
-   .recordingSingle .cta{
+   .recordingSingle .cta, .ideaSingle .cta{
     display:none;
    }
 
-   .recordingSingle:hover .cta{
+   .recordingSingle:hover .cta, .ideaSingle:hover .cta{
     display:block;
    }
   
@@ -254,7 +254,11 @@ h3{
         font-size:1.25rem;
        }
 
-       .recordingSingle .cta{
+       h2{
+        font-size:2rem;
+       }
+
+       .recordingSingle .cta, .ideaSingle .cta{
         display:block;
        }
 
