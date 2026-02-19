@@ -27,7 +27,32 @@ export default {
                 
             ]
 
+        },
+        {
+            type:"object",
+            name:"shows",
+            title:'Shows BG',
+            fields:[
+                
+                    {
+                        name:"image",
+                        type:'image',
+                        title:"file"
+                    },
+                    {
+                        name:"video",
+                        type:'mux.video',
+                        title:"Video"
+                    }
+                
+            ]
+
         }
        
-    ]
+    ],
+    // preview: {
+    //     select: {
+    //       title: 'Home',
+    //     }
+    //   },
 }

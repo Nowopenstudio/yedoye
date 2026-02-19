@@ -18,8 +18,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const query = await getData(`{
-    'data':*[_type=='home'][0]{cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}},
-
+    'data':*[_type=='home'][0]{cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},shows{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}},
     }`)
  const {data} = query.data  
 
