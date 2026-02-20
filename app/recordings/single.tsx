@@ -28,7 +28,7 @@ export default function Single({data,count}:any) {
   return (
    
     
-     <Link href={`/recordings/${data.slug}`} onMouseOver={()=>over()} onMouseOut={()=>out()} className={`w-[100vw] md:w-[50vw] lg:w-[33.33333333333333vw] pr-[--sm] flex-shrink-0 h-full overflow-hidden relative recordingSingle`}>
+     <Link href={`/recordings/${data.slug}`} onMouseOver={()=>over()} onMouseOut={()=>out()} className={`w-[100vw] md:w-[50vw] lg:w-[33.33333333333333vw] pr-[--sm] flex-shrink-0 h-full overflow-hidden relative recordingSingle border-2 border-[--purple]`}>
                           {data.cover.image?(
                             <div className="absolute top-0 left-0 w-full h-full z-[0]">
                               <Image alt="image" height={0}  width={0} sizes="100vw" src={data.cover.image}  className={`fadeOn w-full h-full object-cover`}/>
