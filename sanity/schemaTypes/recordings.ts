@@ -29,6 +29,26 @@ export default {
 
         },
         {
+            type:"object",
+            name:"header",
+            title:'Header',
+            fields:[
+                
+                    {
+                        name:"image",
+                        type:'image',
+                        title:"file"
+                    },
+                    {
+                        name:"video",
+                        type:'mux.video',
+                        title:"Video"
+                    }
+                
+            ]
+
+        },
+        {
             type:'string',
             name:'title',
             title:'Title',
@@ -46,7 +66,7 @@ export default {
          {
             type:'object',
             name:'info',
-            title:'Inforamtion',
+            title:'Information',
             fieldsets:[{
                 name:'2col',
                 options:{columns:2}
@@ -60,6 +80,8 @@ export default {
                 {name:"cta",type:"string",title:"CTA"}
             ]
         },
+        {name:'copy',title:'Description',type:'array',of:[{type:'block'}]},
+
 
          {
                         type:'array',

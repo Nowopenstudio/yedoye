@@ -45,8 +45,8 @@ export default function Single({data,count}:any) {
                        </React.Fragment>
                        ):('')}
                        <div className="bg-[--black] text-[--purple] w-full bottom-0 left-0 absolute z-10 overflow-hidden cta ">
-                            <div className="bg-[--purple] w-full py-[--xs] text-[--black] text-center"><p className="titleText">
-                              <ReadScroll data={{'cta':`${data.info.date?`${data.info.date}  - `:''}${data.info.location?`${data.info.location} - `:''}${data.title}`,"url":`/recording/${data.slug}`}} time={14}/></p></div>
+                            <div className="bg-[--purple] w-full py-[--xs] text-[--black] text-center">
+                              <ReadScroll data={{'cta':`${data.info.date?`${data.info.date}  - `:''}${data.info.location?`${data.info.location} - `:''}${data.title}`,"url":`/recording/${data.slug}`}} time={14}/></div>
                             <ReadScroll data={{"cta":"View","url":`/recording/${data.slug}`}} time={4}/>
                             
                           </div>

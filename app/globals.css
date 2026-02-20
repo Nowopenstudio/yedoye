@@ -96,11 +96,7 @@ h3{
   font-size:2rem;
 }
 
-.footnote{
-  font-size:1rem;
-  font-weight: 700;
-  line-height: 130%;
-}
+
 
 .titleText{
     text-box-trim: both;
@@ -126,6 +122,12 @@ h3{
     font-weight: 900;
     text-transform: uppercase;
 
+  }
+
+  p.footnote, .footnote{
+    font-size:1rem;
+    font-weight: 700;
+    line-height: 130%;
   }
 
   .singleShow:nth-child(odd) .date,   .singleShow:nth-child(odd) .cta, .singleShow:nth-child(even) .title{

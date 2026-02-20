@@ -3,7 +3,8 @@ import { getData, getDate } from "../../util/sanity";
 import React from "react";
 import ShowScroll from "./progressBar";
 import GalleryScroll from "./galleryScroll";
-import Idea from "./idea";
+import Idea from "./recordings";
+import Recordings from "./recordings";
 
 
 
@@ -11,14 +12,14 @@ import Idea from "./idea";
 export default async function Home({params}:any) {
    const {slug} = await params
   const query = await getData(`{
-    'data':*[_type=='recordings' && slug.current=="${slug}"][0]{title, "slug":slug.current,content[]{content,text,"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}}
+    'data':*[_type=='recordings' && slug.current=="${slug}"][0]{title,copy, "slug":slug.current,cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},content[]{content,text,"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},info,credits}
  }`)
 
  const {data} = query.data  
   return (
 
   
- <Idea data={data}/>
+ <Recordings data={data}/>
 
   );
 }

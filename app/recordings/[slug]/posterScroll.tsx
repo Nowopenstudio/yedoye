@@ -7,7 +7,7 @@ import useMeasure from "react-use-measure";
 import { useEffect, useState } from "react";
 
 
-export default function GalleryScroll({data,time}:any) {
+export default function PosterScroll({data,time}:any) {
   const [ref, {width}] = useMeasure();
   const xTranslation = useMotionValue(0)
   useEffect(()=>{
@@ -27,21 +27,29 @@ export default function GalleryScroll({data,time}:any) {
       <motion.div  className="relative flex z-[1] w-max" ref={ref} style={{x:xTranslation}}>
           
 
-                <div  className="w-[90vw] md:w-[75vw] flex-shrink-0">
+                <div  className="h-[90vh] flex-shrink-0">
                     <Image alt="image" height={0}  width={0} sizes="100vw" src={data}  className={`border border-[--purple]
- fadeOn w-full h-auto`}/>
+ fadeOn h-full w-auto`}/>
                 </div>
-                <div  className="w-[90vw] md:w-[75vw] flex-shrink-0">
+                <div  className="h-[90vh] flex-shrink-0">
                     <Image alt="image" height={0}  width={0} sizes="100vw" src={data}  className={`border border-[--purple]
- fadeOn w-full h-auto`}/>
+ fadeOn h-full w-auto`}/>
                 </div>
-                <div  className="w-[90vw] md:w-[75vw] flex-shrink-0">
+                <div  className="h-[90vh] flex-shrink-0">
                     <Image alt="image" height={0}  width={0} sizes="100vw" src={data}  className={`border border-[--purple]
- fadeOn w-full h-auto`}/>
+ fadeOn h-full w-auto`}/>
                 </div>
-                <div  className="w-[90vw] md:w-[75vw] flex-shrink-0">
+                <div  className="h-[90vh] flex-shrink-0">
                     <Image alt="image" height={0}  width={0} sizes="100vw" src={data}  className={`border border-[--purple]
- fadeOn w-full h-auto`}/>
+ fadeOn h-full w-auto`}/>
+                </div>
+                <div  className="h-[90vh] flex-shrink-0">
+                    <Image alt="image" height={0}  width={0} sizes="100vw" src={data}  className={`border border-[--purple]
+ fadeOn h-full w-auto`}/>
+                </div>
+                <div  className="h-[90vh] flex-shrink-0">
+                    <Image alt="image" height={0}  width={0} sizes="100vw" src={data}  className={`border border-[--purple]
+ fadeOn h-full w-auto`}/>
                 </div>
                 
         
