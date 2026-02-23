@@ -17,7 +17,7 @@ export default function CustomDonationInput({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value: number;
   className?: string;
-}): JSX.Element {
+}): any {
   return (
     <div className="w-full">
       <p ><strong>Custom donation amount</strong></p>
