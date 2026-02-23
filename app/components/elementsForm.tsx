@@ -18,7 +18,7 @@ import getStripe from "../util/get-stripejs";
 import { createPaymentIntent } from "../actions/stripe";
 import RecordScroll from "../recordings/[slug]/recordScroll";
 
-function CheckoutForm({data}:any): JSX.Element {
+function CheckoutForm({data}:any){
   const [input, setInput] = React.useState<{
     customDonation: number;
     cardholderName: string;
