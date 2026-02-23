@@ -23,7 +23,7 @@ function CheckoutForm({data}:any){
     customDonation: number;
     cardholderName: string;
   }>({
-    customDonation: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
+    customDonation: 10,
     cardholderName: "",
   });
   const [paymentType, setPaymentType] = React.useState<string>("");
