@@ -18,6 +18,7 @@ export default async function Home() {
   
   <React.Fragment>
     <div className="min-h-[100svh] w-[100vw] relative pt-[--med]">
+      {/* substack */}
        <div className="w-[100vw] grid  grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 text-purple bg-[--black] text-[--purple]  pb-[58px] md:pb-[88px] lg:pb-[48px] xl:pb-[80px]  ">
           {data.map((item:any,i:number)=>{
             return(
