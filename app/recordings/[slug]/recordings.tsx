@@ -75,7 +75,7 @@ export default function Recordings({data}:any) {
             
             {donation && !clear?(
             <React.Fragment>
-                <div onClick={toggleDonation} className="fixed bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center"><RecordScroll  data={data.info} time={Math.floor(Math.random() * 6)+9}/></div>
+                <div onClick={toggleDonation} className="fixed cursor-pointer bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center"><RecordScroll  data={data.info} time={Math.floor(Math.random() * 6)+9}/></div>
   
             </React.Fragment>
             ):(

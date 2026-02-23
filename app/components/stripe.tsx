@@ -9,7 +9,8 @@ export default function StripeContainer({
 }: any) {
   return (
     <div className="w-full richText min-h-full py-[--xl]">
-<div className="mb-[--sm] richText"><PortableText value={data.donation.copy}/></div>
+<div className="mb-[--sm] richText"><PortableText value={data.donation?data.donation.copy:""
+}/></div>
       
       <ElementsForm data={data}/>
     </div>
