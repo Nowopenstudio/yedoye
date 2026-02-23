@@ -164,7 +164,7 @@ function CheckoutForm({data}:any){
   );
 }
 
-export default function ElementsForm({data}:any): JSX.Element {
+export default function ElementsForm({data}:any) {
   return (
     <Elements
       stripe={getStripe()}
