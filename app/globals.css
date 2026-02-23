@@ -9,6 +9,7 @@
   --sm: 30px;
   --med: 60px;
   --lrg: 90px;
+  --xl: 150px;
 }
 
 /* Lenis */
@@ -107,16 +108,20 @@ h3{
   margin-left: -38px;
 }
 
-.richText p, p{
+.richText p, p, label{
   font-size:1.5rem;
   font-weight:700;
   line-height: 120%;
 }
 
+.Label{
+  color:var(--white);
+}
+
 .richText p{
     margin-bottom:var(--xs);
 }
-.richText strong, strong{
+.richText strong, strong,input{
     font-family: "sans", Arial, Helvetica, sans-serif;
     font-size:1.35rem;
     font-weight: 900;

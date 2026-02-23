@@ -115,6 +115,31 @@ export default {
         
         ]},
         {
+            type:'object',
+            name:'donation',
+            title: "Donation",
+            fields:[
+                {
+                    name:'donate',
+                    type:'boolean',
+                    title:'Donation'
+                },
+                {
+                    type:'string',
+                    name:'cta',
+                    title:'CTA'
+                },
+               {
+                name:'copy',
+                type:'array',
+                title:'Copy',
+                of:[{type:'block'}]
+
+               }
+            ]
+
+        },
+        {
             name:"orderRank",type:"string",title:"Rank"
         }
        

@@ -12,7 +12,7 @@ import Recordings from "./recordings";
 export default async function Home({params}:any) {
    const {slug} = await params
   const query = await getData(`{
-    'data':*[_type=='recordings' && slug.current=="${slug}"][0]{title,copy, "slug":slug.current,cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},content[]{content,text,"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},info,credits}
+    'data':*[_type=='recordings' && slug.current=="${slug}"][0]{title,copy, "slug":slug.current,cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},content[]{content,text,"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},info,credits,donation}
  }`)
 
  const {data} = query.data  
