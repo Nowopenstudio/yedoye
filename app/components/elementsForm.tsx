@@ -188,9 +188,7 @@ export default function ElementsForm({data}:any) {
       borderColor: '#000000',
       backgroundColor: '#000000',
       color: '#3315d1' },
-      '.TabIcon': {
-        opacity: 0,
-      },
+
       '.Input': {
         border: '1px solid #000000',
         borderRadius: '4px',
@@ -199,7 +197,6 @@ export default function ElementsForm({data}:any) {
         fontWeight: '700',
         color: '#ffffff',
         borderWidth: '3px',
-        marginBottom: '10px',
       },
     },
   
@@ -232,7 +229,6 @@ export default function ElementsForm({data}:any) {
         mode: "payment",
         amount: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
         appearance,
-
       }}
     >
       <CheckoutForm data={data}/>
