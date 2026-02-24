@@ -7,12 +7,7 @@ import { MuxVideoBG } from "./util/muxPlayer";
 
 
 export default async function Home() {
-  const query = await getData(`{
-    'data':*[_type=='home'][0]{cover{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio},shows{"image":image.asset->url, "vid":video.asset->playbackId, "ratio":video.asset->data.aspect_ratio}},
 
-    }`)
- const {data} = query.data  
- console.log(data.cover.ratio)
   return (
 
   

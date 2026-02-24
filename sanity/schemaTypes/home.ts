@@ -30,7 +30,47 @@ export default {
         },
         {
             type:"object",
+            name:"coverVert",
+            title:'Cover',
+            fields:[
+                
+                    {
+                        name:"image",
+                        type:'image',
+                        title:"file"
+                    },
+                    {
+                        name:"video",
+                        type:'mux.video',
+                        title:"Video"
+                    }
+                
+            ]
+
+        },
+        {
+            type:"object",
             name:"shows",
+            title:'Shows BG',
+            fields:[
+                
+                    {
+                        name:"image",
+                        type:'image',
+                        title:"file"
+                    },
+                    {
+                        name:"video",
+                        type:'mux.video',
+                        title:"Video"
+                    }
+                
+            ]
+
+        },
+        {
+            type:"object",
+            name:"showVert",
             title:'Shows BG',
             fields:[
                 

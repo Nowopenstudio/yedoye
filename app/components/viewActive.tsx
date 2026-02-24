@@ -2,7 +2,7 @@
 
 import React, {useEffect, useRef } from 'react';
 import {motion, useInView, useAnimation } from "framer-motion";
-import useResize from './useResize';
+import useResize from '../util/useResize';
 
 
 
@@ -10,7 +10,7 @@ import useResize from './useResize';
 export function ViewActive({children, styleSet, count}:any){
    const ref= useRef<HTMLDivElement>(null!)
      const { mobile} = useResize()
-   const isInView = useInView(ref,{once:false,margin: "-70% 0px -30% 0px"})
+   const isInView = useInView(ref,{once:false,margin: "-50% 0px -50% 0px"})
 
 
     
