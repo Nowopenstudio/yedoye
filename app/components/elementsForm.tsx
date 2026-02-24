@@ -165,6 +165,63 @@ function CheckoutForm({data}:any){
 }
 
 export default function ElementsForm({data}:any) {
+  const appearance = {
+    theme: 'stripe' as const,
+    rules: {
+      '.Label': {
+        color: '#ffffff', // Example: changes label color to white
+        'font-size': '14px', // Example: changes label font size
+        'font-weight': '700',
+        // Other supported CSS properties...
+      },
+      // You can also style different states:
+      '.Label--invalid': {
+        color: '#FF0000', // Example: color for invalid labels
+      },
+      '.Tab': {
+        border: '3px solid #000000',
+        color: '#ffffff',
+        fontSize: '18px',
+        marginBottom: '10px',
+      },
+      '.Tab--selected': {
+      borderColor: '#000000',
+      backgroundColor: '#000000',
+      color: '#3315d1' },
+      '.TabIcon': {
+        opacity: 0,
+      },
+      '.Input': {
+        border: '1px solid #000000',
+        borderRadius: '4px',
+        padding: '10px',
+        fontSize: '16px',
+        fontWeight: '700',
+        color: '#ffffff',
+        borderWidth: '3px',
+        marginBottom: '10px',
+      },
+    },
+  
+    variables: {
+      colorPrimary: '#000000',
+      colorSecondary: '#000000',
+      colorAccent: '#000000',
+      colorBackground: '#3315d1',
+      colorText: '#000000',
+      colorDanger: '#ff0000',
+      colorWarning: '#ff0000',
+      fontFamily: 'courier, system-ui, sans-serif',
+      labels:'condensed',
+      fontSize: '16px',
+      fontSizeSm: '16px',
+      fontWeightSm: 'bold',
+      fontWeight: 'bold',
+      spacingUnit: '2px',
+      borderRadius: '4px',
+      // See all possible variables below
+    }
+  };
   return (
     <Elements
       stripe={getStripe()}
@@ -174,6 +231,8 @@ export default function ElementsForm({data}:any) {
         currency: config.CURRENCY,
         mode: "payment",
         amount: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
+        appearance,
+
       }}
     >
       <CheckoutForm data={data}/>
