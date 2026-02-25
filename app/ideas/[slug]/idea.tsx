@@ -27,7 +27,7 @@ export default function Idea({data}:any) {
    
     
      <React.Fragment>
-        <div ref={ref} className="w-[100vw] min-h-[100svh]  bg-[--purple] text-[--black] mt-[40px] relative grid grid-cols-12 pb-[200px]">
+        <div ref={ref} className="w-[100vw] min-h-[100svh]  bg-[--purple] text-[--black] mt-[40px] relative grid grid-cols-12 pb-[200px] pointer-events-auto">
      
             {data.cover?(
               data.cover.image?(

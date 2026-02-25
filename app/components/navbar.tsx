@@ -24,7 +24,7 @@ console.log(page)
      <ReactLenis root>
      
 
-      <div className={`pointer-events-none w-[100vw] h-[100dvh] flex justify-between fixed top-0  px-[--xs] lg:px-[--sm] uppercase text-[--purple]  overflow-hidden z-[10] ${page == "/" || page == "/shows"?"mix-blend-difference":""}`}>
+      <div className={`w-[100vw] h-[100dvh] flex justify-between fixed top-0  px-[--xs] lg:px-[--sm] uppercase text-[--purple]  overflow-hidden z-[10] ${page == "/" || page == "/shows"?"mix-blend-difference":""}`}>
           <LogoScroll />
           </div>
         

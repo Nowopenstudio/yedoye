@@ -29,12 +29,12 @@ export default function LinkScroll({data,time}:any) {
     
       <motion.div  className="flex items-center z-[1] flex-nowrap w-max" ref={ref} style={{x:xTranslation}}>
       
-              <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
-             <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
-              <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
-              <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
-                <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
-                <a  href={data.url} className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">{data.cta}</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></a>
+              <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></div>
+             <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></div>
+              <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></div>
+              <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></div>
+                <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></div>
+                <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0 w-[120px] h-auto" /></div>
                 
    
            

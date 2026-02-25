@@ -1,7 +1,7 @@
 'use client'
 
 import { animate, useMotionValue, motion } from "framer-motion";
-
+import Link from "next/link";
 import Image from "next/image";
 import useMeasure from "react-use-measure";
 import { useEffect, useState } from "react";
@@ -27,24 +27,26 @@ export default function LogoScroll() {
   return (
    
     
-      <motion.div  className="absolute flex gap-[-40px] left-0 items-center top-[0] z-[1] w-max" ref={ref} style={{x:xTranslation}}>
-          
-           <div className="relative infoLogo overflow-hidden"><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-           <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
-
+     <Link href="/" className="w-[100vw] h-auto relative">
+        <motion.div  className="absolute flex gap-[-40px] left-0 items-center top-[0] z-[1] w-max" ref={ref} style={{x:xTranslation}}>
+            
+             <div className="relative infoLogo overflow-hidden"><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+             <div className="relative infoLogo overflow-hidden "><Logo alt="image" height={0}  width={0} sizes="100vw" fill={`var(--purple)`}  className="h-[125px] md:h-[150px] w-auto object-cover"/></div>
+  
+             
+                              
+                               
+             
            
-                            
-                             
-           
-         
-      
-       </motion.div>
+        
+         </motion.div>
+     </Link>
   
 
 
