@@ -67,7 +67,7 @@ export default async function Home({params}:any) {
 export async function generateMetadata({ params }: any) {
   const { slug } = await params
   const query = await getData(`{
-    'data':*[_type=='shows' && slug.current=="${slug}"][0]{title,"summary":pt::text(description),"cover":cover.asset->url}
+    'data':*[_type=='shows' && slug.current=="${slug}"][0]{title,"summary":pt::text(description),"cover":{"image":image.asset->url}}
     ,'home':*[_type=='info'][0]{meta{title,description,keywords,"image":image.asset->url}}
  }`)
  const {data,home} = query.data  
