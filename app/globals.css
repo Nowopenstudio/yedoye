@@ -52,6 +52,13 @@ html.lenis, html.lenis body {
   clip-path: inset(0 0);
 }
 
+.embedStage iframe{
+  width:100%;
+  height:auto;
+  aspect-ratio: 16/9;
+}
+
+
 /* font embeds */
 @font-face {
 	font-family: 'sans';

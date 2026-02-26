@@ -54,6 +54,12 @@ export default function Idea({data}:any) {
   
                     </div>
                    ):('')}
+
+                    {
+                        item.content && item.content.includes('embed') ? (
+                          <div className="col-span-full px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 embedStage" dangerouslySetInnerHTML={{ __html: item.embed }}></div>
+                        ) : ('')
+                      }
                 </React.Fragment>
                 )
             })}

@@ -26,19 +26,29 @@ export default async function Home() {
 }
 
 
-// export async function generateMetadata() {
-//   const query = await getData(`{
-//     'data':*[_type=='home'][0]{meta{title,description,keywords,"image":image.asset->url}}
-//  }`)
-//  const {data} = query.data  
-//   return {
-//     title: `${data.meta.title}`,
-//     keywords: `${data.meta.keywords}`,
-//     description:`${data.meta.description}`,
-//     openGraph: {
-//       images: data.meta.image
-//     }
-//   };
-// }
+export async function generateMetadata() {
+  const query = await getData(`{
+    'data':*[_type=='info'][0]{meta{title,description,keywords,"image":image.asset->url}}
+ }`)
+ const {data} = query.data  
+  return {
+    title: `${data.meta.title}`,
+    keywords: `${data.meta.keywords}`,
+    description:`${data.meta.description}`,
+    openGraph: {
+      images: `${data.meta.image}?auto=format&amp;w=1200`,
+      url:`/`,
+      type:'website',
+    },
+    twitter:{
+      site:`@yedoye_`,
+      card: "summary_large_image"
+    },
+    alternates: {
+        canonical: '/',
+      }
+  };
+}
+
 
 

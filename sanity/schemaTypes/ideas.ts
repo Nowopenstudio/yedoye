@@ -54,7 +54,8 @@ export default {
                                     {title: 'Text', value: 'text'},
                                     {title: 'Image', value: 'image'},
                                     {title:'Image Gallery', value:"gallery"},
-                                     {title: 'Video', value: 'video'}
+                                     {title: 'Video', value: 'video'},
+                                     { title: 'Video Embed', value: 'embed' }
                                     ],
 
                                     
@@ -62,6 +63,7 @@ export default {
                                 {name:'text',title:'Text',type:'array',of:[{type:'block'}], hidden: ({ parent }:any) => parent?.content !== "text"},
                                 {name:'image',title:'Image',type:'image', hidden: ({ parent }:any) => parent?.content !== "image"},
                                 {name:'gallery',title:'Image Gallery',type:'array', hidden: ({ parent }:any) => parent?.content !== "gallery",of:[{type:'image', name:'image',title:'Image'}]},
+                                { name: 'embed', title: 'Embed', type: 'text', hidden: ({ parent }: any) => parent?.content !== "embed" },
                                 {name:'vid',title:'Video',type:'mux.video', hidden: ({ parent }:any) => parent?.content !== "video"},
                             ]}
                         ]
