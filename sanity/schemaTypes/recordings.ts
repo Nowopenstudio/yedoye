@@ -29,26 +29,6 @@ export default {
 
         },
         {
-            type:"object",
-            name:"header",
-            title:'Header',
-            fields:[
-                
-                    {
-                        name:"image",
-                        type:'image',
-                        title:"file"
-                    },
-                    {
-                        name:"video",
-                        type:'mux.video',
-                        title:"Video"
-                    }
-                
-            ]
-
-        },
-        {
             type:'string',
             name:'title',
             title:'Title',
@@ -135,6 +115,12 @@ export default {
                 title:'Copy',
                 of:[{type:'block'}]
 
+               },
+               {
+                name:'subs',
+                type:'array',
+                title:'Subscription Copy',
+                of:[{type:'block'}]
                }
             ]
 

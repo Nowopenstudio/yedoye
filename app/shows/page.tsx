@@ -5,6 +5,7 @@ import LinkScroll from "./linkScroll";
 import { MuxVideoBG } from "../util/muxPlayer";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollUp from "../util/misc";
 
 
 export default async function Home() {
@@ -46,7 +47,7 @@ export default async function Home() {
           
 
 
-
+<ScrollUp />
   </React.Fragment>
 
   );

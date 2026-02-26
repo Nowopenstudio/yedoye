@@ -14,6 +14,7 @@ import React from "react";
 import Single from "./single";
 import useResize from "../util/useResize";
 import SmoothScrolling from "../util/SmoothScrolling";
+import ScrollUp from "../util/misc";
 
 
 
@@ -56,6 +57,7 @@ export default function Scroller({data}:any) {
              })}
       </div>
     </div>
+    <ScrollUp />
     </SmoothScrolling>
 
 

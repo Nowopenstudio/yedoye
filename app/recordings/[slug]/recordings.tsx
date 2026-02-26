@@ -16,6 +16,7 @@ import RecordScroll from "./recordScroll";
 import PosterScroll from "./posterScroll";
 import Credits from "./credits";
 import StripeContainer from "../../components/stripe";
+import ScrollUp from "@/app/util/misc";
 
 
 export default function Recordings({data}:any) {
@@ -54,7 +55,8 @@ export default function Recordings({data}:any) {
                       <div className="w-full richText"><PortableText value={data.copy}/></div>
                       
                     </div>
-            {data.content.map((item:any,i:number)=>{
+            {data.content?(
+              data.content.map((item:any,i:number)=>{
                 return(
                 <React.Fragment key={`${i}-text`}>
                    {item.content=="text"?(
@@ -70,7 +72,8 @@ export default function Recordings({data}:any) {
                    ):('')}
                 </React.Fragment>
                 )
-            })}
+            })
+            ):('')}
           </div>
             
             {donation && !clear?(
@@ -87,13 +90,13 @@ export default function Recordings({data}:any) {
             ):('')}
           
 
-          <div className={` pointer-events-auto top-0 left-0 w-[100vw] min-h-[100vh] bg-[--purple] z-[100] ${form?'block pointer-events-auto':'hidden pointer-events-none'} grid grid-cols-12 items-start overflow-y-auto`}>
-            <div className="pointer-events-auto col-span-full px-[--sm] md:col-span-6 md:col-start-4 flex items-center justify-center text-[--black]">
+          <div className={` pointer-events-auto top-0 left-0 w-[100vw] min-h-[100vh] bg-[--purple] z-[100] ${form?'block pointer-events-auto':'hidden pointer-events-none'} grid grid-cols-12 items-start overflow-y-auto overflow-x-hidden`}>
+            <div className="pointer-events-auto col-span-full px-[--sm] md:col-span-6 md:col-start-4 flex items-center justify-center text-[--black] pb-[--xl]">
               <StripeContainer data={data}/>
             </div>
           </div>
 
-  
+          <ScrollUp />
      </React.Fragment>
   
 

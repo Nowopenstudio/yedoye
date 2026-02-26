@@ -1,5 +1,6 @@
 "use client"
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useEffect } from "react";
 
   export function TextOn({text, num}: {text?: string; num?: number;}) {
 
@@ -13,4 +14,23 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
       return (full)
   }
 
+
+  export default function ScrollUp() {
+    // useEffect(() => {window.document.scrollingElement?.scrollTo(0, 0)
+    //   window.scrollTo(0,0)
+      
+          
+    // }, [])
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      window.document.scrollingElement?.scrollTo(0, 0)
+  
+    }, []);
+  
+  
+    return null
+  }
   

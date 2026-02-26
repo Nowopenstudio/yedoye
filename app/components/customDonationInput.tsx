@@ -20,8 +20,7 @@ export default function CustomDonationInput({
 }): any {
   return (
     <div className="w-full">
-      <p ><strong>Custom donation amount</strong></p>
-      <div><p className="color-[--white]"><strong>{formatAmountForDisplay(value, currency)}</strong></p></div>
+      <h3 className="uppercase mb-2">Donation amount: <span className="color-white uppercase">{formatAmountForDisplay(value, currency)}</span> </h3>
       <input
         type="range"
         name={name}
@@ -30,7 +29,7 @@ export default function CustomDonationInput({
         step={step}
         onChange={onChange}
         value={value}
-        className="w-full color-[--black]"
+        className="w-full color-[--black] color-[--purple] bg-[--purple]"
       ></input>
     </div>
   );

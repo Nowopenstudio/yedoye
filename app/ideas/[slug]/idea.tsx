@@ -12,6 +12,7 @@ import GalleryScroll from "./galleryScroll";
 import { getDateLong } from "@/app/util/sanity";
 import { PortableText } from "next-sanity";
 import React from "react";
+import ScrollUp from "@/app/util/misc";
 
 
 export default function Idea({data}:any) {
@@ -62,7 +63,7 @@ export default function Idea({data}:any) {
             <div className="w-full px-[--sm] text-[--purple] uppercase"><h1 className='w-full truncate'>{data.title}</h1></div>
             <motion.div className="absolute h-full top-0 left-0 z-10 bg-[--white] pl-[--sm] overflow-hidden uppercase text-[--purple]" style={{width}}><h1 className="w-[100vw]">{data.title}</h1></motion.div>
           </div>
-  
+          <ScrollUp />
      </React.Fragment>
   
 

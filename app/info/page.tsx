@@ -4,6 +4,7 @@ import React from "react";
 import CTAScroll from "./ctaScroll";
 import GalleryScroll from "../components/galleryScroll";
 import LinkScroll from "./linkScroll";
+import ScrollUp from "../util/misc";
 
 
 export default async function Home() {
@@ -72,7 +73,7 @@ export default async function Home() {
 
           
 
-
+          <ScrollUp />
 
   </React.Fragment>
 

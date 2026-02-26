@@ -97,6 +97,10 @@ h3{
   font-size:2rem;
 }
 
+.payForm h2{
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
 
 
 .titleText{

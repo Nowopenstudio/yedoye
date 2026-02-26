@@ -3,6 +3,7 @@ import { getData, getDate } from "../../util/sanity";
 import React from "react";
 import ShowScroll from "./showScroll";
 import GalleryScroll from "./galleryScroll";
+import ScrollUp from "@/app/util/misc";
 
 
 
@@ -53,7 +54,7 @@ export default async function Home({params}:any) {
 
 
 
-          
+          <ScrollUp />
 
 
 

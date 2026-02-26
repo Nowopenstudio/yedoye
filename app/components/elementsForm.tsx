@@ -123,7 +123,7 @@ function CheckoutForm({data}:any){
     <>
       <form onSubmit={handleSubmit} ref={formRef}>
         <CustomDonationInput
-          className="elements-style"
+          className="elements-style p-[--sm]"
           name="customDonation"
           value={input.customDonation}
           min={config.MIN_AMOUNT}
@@ -169,9 +169,9 @@ export default function ElementsForm({data}:any) {
     theme: 'stripe' as const,
     rules: {
       '.Label': {
-        color: '#ffffff', // Example: changes label color to white
+        color: '#000000', // Example: changes label color to white
         'font-size': '14px', // Example: changes label font size
-        'font-weight': '700',
+        'font-weight': '800',
         // Other supported CSS properties...
       },
       // You can also style different states:
@@ -179,7 +179,7 @@ export default function ElementsForm({data}:any) {
         color: '#FF0000', // Example: color for invalid labels
       },
       '.Tab': {
-        border: '3px solid #000000',
+        border: '2px solid #000000',
         color: '#ffffff',
         fontSize: '18px',
         marginBottom: '10px',
@@ -196,7 +196,7 @@ export default function ElementsForm({data}:any) {
         fontSize: '16px',
         fontWeight: '700',
         color: '#ffffff',
-        borderWidth: '3px',
+        borderWidth: '2px',
       },
     },
   
