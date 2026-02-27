@@ -62,7 +62,7 @@ export const getData = (async (query:any) =>{
    
   const initQuery = query
   const data = await client.fetch(initQuery,{},
-      { next : { revalidate : 50 }});
+      { next : { revalidate : 5000 }});
   return {data}
 
 })

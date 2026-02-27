@@ -24,7 +24,7 @@ export const myStructure = (S:any,context:any) =>
 
         
   
-          ...S.documentTypeListItems().filter(listItem => !['info','shows','recordings','ideas','home'].includes(listItem.getId())),
+          ...S.documentTypeListItems().filter(listItem => !['info','shows','recordings','ideas','home','mux.videoAsset'].includes(listItem.getId())),
   
         
     
