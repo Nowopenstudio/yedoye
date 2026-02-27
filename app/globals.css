@@ -302,4 +302,52 @@ h3{
       }
     
         }
+
+
+        @media (hover: hover) {
+
+          .scrollLink:hover .scroller{
+            background-color: var(--black);
+          }
+
+          .scrollLink:hover .scroller h3, .scrollLink:hover .scroller svg{
+            color: var(--purple) !important;
+            fill: var(--purple) !important;
+            
+          }
+
+          .scrollLink:hover .scroller svg{
+            animation: blink .5s ease-in-out infinite;
+          }
+        }
     
+
+
+
+        /* animation */
+        @keyframes blink{
+          0%{    opacity:0;transform: translateX(0);
+          }
+          70% {
+           opacity:0;transform: translateX(0);
+            }
+             75% {
+           opacity:1;transform: translateX(0);
+            }
+
+            
+
+        }
+
+        @keyframes pulse{
+          0%{   transform: translateX(0);
+          }
+
+             100% {
+           opacity:1;transform: translateX(10px);
+            }
+
+            
+
+        }
+        

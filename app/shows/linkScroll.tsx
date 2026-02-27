@@ -27,7 +27,7 @@ export default function LinkScroll({data,time}:any) {
   return (
    
     
-      <motion.div  className="flex items-center z-[1] flex-nowrap w-max" ref={ref} style={{x:xTranslation}}>
+      <motion.div  className="flex items-center z-[1] flex-nowrap w-max scroller" ref={ref} style={{x:xTranslation}}>
       
               <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0  w-[100px] md:w-[120px] h-auto" /></div>
              <div className="flex flex-shrink-0 items-center uppercase pr-[--sm] gap-[--sm] w-max"><h3 className="flex-shrink-0">get details</h3><Arrow className="flex-shrink-0  w-[100px] md:w-[120px] h-auto" /></div>

@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl:'https://www.yedoye.live',
-  generateRobotsTxt: false,
+  generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/server-sitemap.xml'], 
   robotsTxtOptions: {
