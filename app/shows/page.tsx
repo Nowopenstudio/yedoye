@@ -25,7 +25,7 @@ export default async function Home() {
             return(
               <Link href={`/shows/${item.slug}`} key={`show-${i}`} className="singleShow w-full grid grid-cols-12 uppercase ">
                 <div className="date col-span-full md:col-span-3 pt-[--xs] pb-0 md:pt-[--sm] md:pb-[--sm] text-center flex items-center justify-center "><h3>{`${getDate(item.info.date)} @ ${item.info.timeStart}`}</h3></div>
-                <div className="title col-span-full md:col-span-6 pt-0 pb-[--xs] md:pt-[--sm] md:pb-[--sm] text-center flex items-center "><h3 className="w-full">{item.title}</h3></div>
+                <div className="title col-span-full md:col-span-6 pt-0 pb-[--xs] md:pt-[--sm] md:pb-[--sm] text-center flex items-center px-[--xs] md:px-0"><h3 className="w-full">{item.title}</h3></div>
                 <div className="cta col-span-full md:col-span-3 py-[--xs] overflow-hidden flex items-center "><LinkScroll data={item.info} time={Math.floor(Math.random() * 6)+3}/></div>
   
               </Link>

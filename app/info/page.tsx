@@ -30,17 +30,17 @@ export default async function Home() {
 
           {/* bio */}
           <div className="info-bio w-full grid grid-cols-12 px-0 md:px-[--sm] gap-[--sm] bg-[--purple] text-[--black] py-[--sm] md:py-[--med] pointer-events-auto">
-            <div className="col-span-full px-[--sm] xl:px-0 md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4">
+            <div className="col-span-full px-[--xs] md:px-[--sm] xl:px-0 md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4">
               <h2 className="uppercase">{data.name}</h2>
               <p  className="uppercase footnote">{data.titles}<br/>{data.location}</p>
             </div>
-            <div className="richText Bio col-span-full px-[--sm] xl:px-0 xl:col-span-8 xl:col-start-4 2xl:col-start-5">
+            <div className="richText Bio col-span-full px-[--xs] md:px-[--sm] xl:px-0 xl:col-span-8 xl:col-start-4 2xl:col-start-5">
               <PortableText value={data.bio}/>
             </div>
           </div>
 
           {/* credits */}
-          <div className="info-bio w-full grid grid-cols-12 px-[--sm] gap-[--sm] bg-[--purple] text-[--black] pt-[--sm] md:pt-[--lrg] pb-[--lrg]">
+          <div className="info-bio w-full grid grid-cols-12 px-[--xs] md:px-[--sm] gap-[--sm] bg-[--purple] text-[--black] pt-[--sm] md:pt-[--lrg] pb-[--lrg]">
              <div className="col-span-4 mb-[--med] md:mb-0"><p  className="uppercase footnote">Credits</p></div>
              <div className="col-span-full px-[0] md:px-[--sm] xl:px-0 xl:col-span-8 xl:col-start-4 2xl:col-start-5">
                 {data.cv.map((item:any,i:number)=>{

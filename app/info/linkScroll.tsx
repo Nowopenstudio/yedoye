@@ -32,33 +32,33 @@ export default function LinkScroll({data,color,time}:any) {
           
         {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow className="w-[100px] md:w-[120px] h-auto" fill={`var(--${color})`}/></a>
             )
         })}
           {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow className="w-[100px] md:w-[120px] h-auto" fill={`var(--${color})`}/></a>
             )
         })}
        {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow className="w-[100px] md:w-[120px] h-auto" fill={`var(--${color})`}/></a>
             )
         })}
          {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow className="w-[100px] md:w-[120px] h-auto" fill={`var(--${color})`}/></a>
             )
         })}
          {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow className="w-[100px] md:w-[120px] h-auto" fill={`var(--${color})`}/></a>
             )
         })}
          
          {data.map((item:any,i:number)=>{
             return(
-              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow fill={`var(--${color})`}/></a>
+              <a key={`${item.label}-${i}`} href={item.link} className="flex flex-shrink-0 items-center uppercase gap-[--sm] w-max"><h1>{item.label}</h1><Arrow className="w-[100px] md:w-[120px] h-auto" fill={`var(--${color})`}/></a>
             )
         })}
          

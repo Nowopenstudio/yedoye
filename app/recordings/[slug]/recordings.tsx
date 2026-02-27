@@ -44,13 +44,13 @@ export default function Recordings({data}:any) {
                <div className="overflow-hidden col-span-full relative h-auto mb-[--med]"> <PosterScroll data={data.cover.image} time={12}/></div>
               ):('')
             ):('')}
-            <div className="col-span-full px-[--sm] xl:px-0 md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4 uppercase mb-[--sm] 2xl:mb-0 2xl:px-[--sm] ">
+            <div className="col-span-full px-[--xs] md:px-[--sm] xl:px-0 md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4 uppercase mb-[--sm] 2xl:mb-0 2xl:px-[--sm] ">
             <p className="mb-[--xs] md:w-2/3 footnote" ><strong>{data.title}</strong></p>
               <p className="whitespace-pre-wrap footnote">{data.info.location?`${data.info.location}`:''}</p>
               <p className="footnote">{`${data.info.date?`${data.info.date}`:''}`}</p>
               
             </div>
-            <div className="col-span-full px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 pb-[--sm] md:pb-[--med]">
+            <div className="col-span-full px-[--xs] md:px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 pb-[--sm] md:pb-[--med]">
             <div className='w-full  mb-[--sm] md:mb-[--med]'><Credits credits={data.credits}/></div>
                       <div className="w-full richText"><PortableText value={data.copy}/></div>
                       
@@ -60,7 +60,7 @@ export default function Recordings({data}:any) {
                 return(
                 <React.Fragment key={`${i}-text`}>
                    {item.content=="text"?(
-                    <div className="col-span-full px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 richText">
+                    <div className="col-span-full px-[--xs] md:px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 richText">
                       <PortableText value={item.text}/>
                     </div>
                    ):('')}
@@ -72,7 +72,7 @@ export default function Recordings({data}:any) {
                    ):('')}
                      {
                         item.content && item.content.includes('embed') ? (
-                          <div className="col-span-full px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 embedStage" dangerouslySetInnerHTML={{ __html: item.embed }}></div>
+                          <div className="col-span-full px-[--xs] md:px-[--sm] xl:px-0 xl:col-span-6 xl:col-start-4 2xl:col-start-5 embedStage" dangerouslySetInnerHTML={{ __html: item.embed }}></div>
                         ) : ('')
                       }
                 </React.Fragment>
@@ -96,7 +96,7 @@ export default function Recordings({data}:any) {
           
 
           <div className={` pointer-events-auto top-0 left-0 w-[100vw] min-h-[100vh] bg-[--purple] z-[100] ${form?'block pointer-events-auto':'hidden pointer-events-none'} grid grid-cols-12 items-start overflow-y-auto overflow-x-hidden`}>
-            <div className="pointer-events-auto col-span-full px-[--sm] md:col-span-6 md:col-start-4 flex items-center justify-center text-[--black] pb-[--xl]">
+            <div className="pointer-events-auto col-span-full px-[--xs] md:px-[--sm] md:col-span-6 md:col-start-4 flex items-center justify-center text-[--black] pb-[--xl]">
               <StripeContainer data={data}/>
             </div>
           </div>

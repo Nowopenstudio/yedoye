@@ -48,7 +48,7 @@ export default function Scroller({data}:any) {
   return (
     <SmoothScrolling>
     <div className={`h-auto w-[100vw] overflow-hidden top-0 left-0 relative`} style={{height:mobile?'auto':fullPage}}>
-      <div className="contentHolder relative md:fixed top-0 h-auto md:h-[100dvh] left-0 block md:inline-flex  min-w-[100vw] md:min-w-min pt-[--med] pb-[58px] md:pb-[88px] lg:pb-[48px] xl:pb-[80px]" ref={ref} style={{transform:`translateX(-${(prog&&scrollX>0)?(prog)*(100-(winX/fullPage*100)):0}%)`}}>
+      <div className="contentHolder relative md:fixed top-0 h-auto md:h-[100svh] left-0 block md:inline-flex  min-w-[100vw] md:min-w-min pt-[--med] pb-[116px] md:pb-[88px] lg:pb-[48px] xl:pb-[80px]" ref={ref} style={{transform:`translateX(-${(prog&&scrollX>0)?(prog)*(100-(winX/fullPage*100)):0}%)`}}>
 
         {data.map((item:any,i:number)=>{
                return(

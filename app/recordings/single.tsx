@@ -50,7 +50,7 @@ export default function Single({data,count}:any) {
     
    
     
-     <Link href={`/recordings/${data.slug}`} onMouseOver={!mobile?()=>over():undefined} onMouseOut={!mobile?()=>out():undefined} className={`pointer-events-auto w-[100vw] md:w-[50vw] 2xl:w-[33.33333333333333vw]  md:flex-shrink-0 h-[calc(100dvh-116px)] md:h-full overflow-hidden relative recordingSingle border-none md:border-2 border-[--purple] block md:inline-block `}>
+     <Link href={`/recordings/${data.slug}`} onMouseOver={!mobile?()=>over():undefined} onMouseOut={!mobile?()=>out():undefined} className={`pointer-events-auto w-[100vw] md:w-[50vw] 2xl:w-[33.33333333333333vw]  md:flex-shrink-0 h-[calc(100svh-116px)] md:h-full overflow-hidden relative recordingSingle border-none md:border-2 border-[--purple] block md:inline-block `}>
                          <motion.div ref={ref} className="relative h-full w-full" >
                             {data.cover.image?(
                               <div className="absolute top-0 left-0 w-full h-full z-[0]">

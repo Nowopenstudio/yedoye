@@ -25,7 +25,7 @@ export default async function Home({params}:any) {
               <GalleryScroll data={data.cover.image} time={10}/>
           </div>
            {/* bio */}
-          <div className="info-bio col-span-full grid grid-cols-12 px-[--sm] gap-[--sm] bg-[--purple] text-[--black] py-[--med]">
+          <div className="info-bio col-span-full grid grid-cols-12 px-[--xs] md:px-[--sm] gap-[--sm] bg-[--purple] text-[--black] pb-[--lrg] pt-[--med] md:pb-[--med]">
             <div className="pointer-events-auto px-[0] md:px-[--sm] xl:px-0 col-span-full md:col-span-10 xl:col-span-6 xl:col-start-4 2xl:col-start-1 2xl:col-span-4  uppercase mb-[--sm] lg:mb-0">
               <h1 className="mb-0 lg:mb-[--sm] date">{getDate(data.info.date)}</h1>
               <p className="whitespace-pre-wrap">{`${data.info.timeStart}${data.info.timeStop?` - ${data.info.timeStop}`:''}`}<br/>{data.info.location}</p>
