@@ -15,7 +15,7 @@ export default function StripeContainer({
       <div className="px-[--sm]"><ElementsForm data={data}/></div>
       <div className="mb-[--sm] richText px-[--sm] pt-[--sm] payForm"><PortableText value={data.donation?data.donation.subs:""
 }/></div>
-<a href="https://buy.stripe.com/6oUeVccm79uF20MbmY7Zu00"  target="_blank" className="w-full"><div className="full bg-[--black] text-[--purple] p-[--sm] text-center uppercase"><h2>Subscribe</h2></div></a>
+<a href="https://buy.stripe.com/6oUeVccm79uF20MbmY7Zu00"  target="_blank" className="w-full"><div className="full bg-[--black] text-[--purple] hover:bg-[--purple] hover:text-[--white p-[--sm] text-center uppercase"><h2>Subscribe</h2></div></a>
     </div>
 
   );

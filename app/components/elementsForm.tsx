@@ -157,7 +157,7 @@ function CheckoutForm({data}:any){
           </div>
         </fieldset>
         
-        <div onClick={handleSubmit} className="fixed bottom-[58px] left-0 md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center cursor-pointer"><RecordScroll  data={{cta:`Pay ${formatAmountForDisplay(input.customDonation, config.CURRENCY)} for ${data.title}`}} time={Math.floor(Math.random() * 6)+12}/></div>
+        <div onClick={handleSubmit} className="fixed bottom-[58px] left-0 md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center cursor-pointer scrollerAlt"><RecordScroll  data={{cta:`Pay ${formatAmountForDisplay(input.customDonation, config.CURRENCY)} for ${data.title}`}} time={Math.floor(Math.random() * 6)+12}/></div>
       </form>
       <PaymentStatus status={payment.status} />
     </>

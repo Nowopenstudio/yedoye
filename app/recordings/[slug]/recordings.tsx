@@ -83,15 +83,15 @@ export default function Recordings({data}:any) {
             
             {donation && !clear?(
             <React.Fragment>
-                <div onClick={toggleDonation} className="pointer-events-auto fixed cursor-pointer bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center"><RecordScroll  data={data.info} time={Math.floor(Math.random() * 6)+9}/></div>
+                <div onClick={toggleDonation} className="pointer-events-auto fixed cursor-pointer bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center scrollerAlt"><RecordScroll  data={data.info} time={Math.floor(Math.random() * 6)+9}/></div>
   
             </React.Fragment>
             ):(
-              <a href={data.info.url} target="_blank"><div className="pointer-events-auto fixed bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center"><RecordScroll  data={data.info} time={Math.floor(Math.random() * 6)+9}/></div></a>
+              <a href={data.info.url} target="_blank"><div className="pointer-events-auto fixed bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--black] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center scrollerAlt"><RecordScroll  data={data.info} time={Math.floor(Math.random() * 6)+9}/></div></a>
             )}
 
             {form?(
-              <a href={data.info.url} target="_blank"><div className="fixed left-0 top-0 bg-[--white] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[200] flex items-center cursor-pointer pointer-events-auto"><RecordScroll  data={{cta:`Skip donations and be a hater`}} time={Math.floor(Math.random() * 6)+12}/></div></a>
+              <a href={data.info.url} target="_blank" className="scrollLink"><div className="fixed left-0 top-0 bg-[--white] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[200] flex items-center cursor-pointer pointer-events-auto scroller"><RecordScroll  data={{cta:`Skip donations and be a hater`}} time={Math.floor(Math.random() * 6)+12}/></div></a>
             ):('')}
           
 

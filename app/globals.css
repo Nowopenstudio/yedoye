@@ -316,8 +316,15 @@ h3{
             
           }
 
-          .scrollLink:hover .scroller svg{
-            animation: blink .5s ease-in-out infinite;
+          .scrollerAlt:hover, .scrollerAlt:hover  h3, .scrollerAlt:hover  svg{
+            background-color: var(--white) !important;
+            color: var(--purple) !important;
+            fill: var(--purple) !important;
+            
+          }
+
+          .singleLink:hover h1, .singleLink:hover svg{
+            animation: blink .2s ease-in-out infinite;
           }
         }
     

@@ -39,7 +39,7 @@ export default async function Home({params}:any) {
           
         </div>
 
-          <a href={data.info.url} target="_blank"><div className="pointer-events-auto fixed bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--white] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center"><ShowScroll   data={data.info} time={Math.floor(Math.random() * 6)+6}/></div></a>
+          <a href={data.info.url} target="_blank" className="scrollLink"><div className="scroller pointer-events-auto fixed bottom-[58px] md:bottom-[88px] lg:bottom-[48px] xl:bottom-[80px] bg-[--white] w-[100vw]  overflow-hidden h-[50px] lg:h-[80px] z-[100] flex items-center"><ShowScroll   data={data.info} time={Math.floor(Math.random() * 6)+6}/></div></a>
       
 
     
