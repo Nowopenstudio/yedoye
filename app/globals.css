@@ -323,8 +323,8 @@ h3{
             
           }
 
-          .singleLink:hover h1, .singleLink:hover svg{
-            animation: blink .2s ease-in-out infinite;
+          .singleLink:hover h1, .singleLink:hover svg, .navBut:hover{
+            animation: blink .4s ease-in-out infinite;
           }
         }
     
